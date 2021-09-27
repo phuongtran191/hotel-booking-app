@@ -1,0 +1,66 @@
+@import "styles/main";
+
+.room-review {
+  display: block;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #F0F0F0;
+  &__write {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__highlights {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: $primary;
+    .highlights__stars {
+      margin-left: 0.5rem;
+      margin-top: 0.5rem;
+      color: #FADB14;
+      font-size: 1rem;
+    }
+  }
+  .btn-review{
+    font-size: 1.2rem;
+    padding: 0.3rem 0.9rem;
+    border: none;
+    color: #fff;
+    font-weight: 400;
+    background-color:$primary;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+  &__filter {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 1px solid #e1e1e1;
+    
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+      display: flex;   
+       flex-direction: row;
+       .rate{
+         font-size: 0.8rem;
+       }
+    }
+
+    .ant-checkbox-group-item {
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.01rem;
+    }
+  }
+  &__title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-right: 1rem;
+  }
+}

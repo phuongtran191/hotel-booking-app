@@ -1,0 +1,94 @@
+@import "styles/main";
+
+.slider-show {
+  margin-bottom: 4rem;
+
+  &__icon {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    transition: all 0.3s;
+    cursor: pointer;
+    span {
+      font-size: 3rem;
+    }
+  }
+
+  &__slick {
+    display: block;
+    overflow: hidden;
+    max-width: 95%;
+    max-height: 27rem;
+
+    border-radius: 0.2rem;
+    position: relative;
+
+    &:hover .slider-show__icon {
+      top: 0;
+      background-color: rgba($primary, $alpha: 0.5);
+    }
+  }
+
+
+
+  &__thumb {
+    display: flex;
+    max-width: 95%;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    
+    &-item {
+      max-width: calc(100% / 5);
+      border-radius: 0.2rem;
+      display: block;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s;
+      img {
+        display: block;
+        width: 100%;
+
+      }
+      &::before{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:100%;
+        left: 0;
+        z-index: 10;
+        background-color: rgba($primary, $alpha: 0.6);
+      }
+
+      &+& {
+        margin-left: 0.4rem;
+      }
+    }
+    &-active::before{
+      top: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      z-index: 10;
+      background-color: rgba($primary, $alpha: 0.6);
+     }
+  }
+
+  .slick-slider {
+    max-width: 50rem;
+  }
+}
+
+// .slick-active{
+//   .thumbnail__img {
+//     transform: translateY(-0.5rem) !important;
+//   }
+// }

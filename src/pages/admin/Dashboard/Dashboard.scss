@@ -1,0 +1,68 @@
+@import '../../../styles/main.scss';
+
+
+.dashboard {
+  display: block;
+
+  &__feature{
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-evenly;
+  }
+  background-color: #FBFAFB;
+}
+
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+
+
+
+// === Responsive ===
+// Tablet
+@include Responsive(md) {
+  .featured__item {
+    margin: 1.2rem;
+  }
+  .featured__money-number {
+    font-size: 2em;
+    padding-right: 0.6em;
+  }
+}
+// Mobile
+@include Responsive(sm) {
+  // feature-info
+  .featured__item {
+    margin: 3rem 0;
+  }
+  .featured__title {
+    font-size: 2rem;
+  }
+  .featured__sub {
+    font-size: 1.25em;
+  }
+  .featured__money-number {
+    font-size: 1.2em;
+    padding-right: 0.3em;
+  }
+  .upward, .downward {
+    font-size: 1rem;
+  }
+
+  // Chart
+  .chart__title {
+    font-size: 2rem;
+  }
+  path, circle {
+    stroke-width: 1px;
+  }
+  circle {
+    r: 1.5
+  }
+  ul.recharts-default-legend {
+    margin-top: -10px !important;
+  }
+  span.recharts-legend-item-text {
+    font-size: 1.2rem;
+  }
+}

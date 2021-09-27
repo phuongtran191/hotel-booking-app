@@ -1,0 +1,42 @@
+@import '../../../../styles/main.scss';
+
+
+// header 64px + breadcumb 22px
+.site-layout-sub-background {
+  padding: 0 16px 24px;
+}
+.site-layout-sub {
+  margin-left: 260px;
+}
+.site-layout-content {
+  min-height: calc(100vh - 62px);
+  margin: 60px 16px 0;
+  overflow: initial;
+}
+
+
+// === Responsive ===
+// tablet
+@include Responsive(md) {
+  .site-layout-sub {
+    margin-left: 0;
+  }
+  .site-layout-sub-background {
+    padding: 0 16px 0px;
+  }
+  .site-layout-content {
+    margin: 12px 24px;
+  }
+}
+// mobile
+@include Responsive(sm) {
+  .site-layout-sub {
+    margin-left: 0;
+  }
+  .site-layout-sub-background {
+    padding: 0 16px 0px;
+  }
+  .site-layout-content {
+    margin: 12px 0;
+  }
+}

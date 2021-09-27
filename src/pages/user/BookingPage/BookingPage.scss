@@ -1,0 +1,316 @@
+@import "styles/main";
+
+.booking {
+  line-height: 1.4rem;
+  font-family: $font-family-base;
+
+
+  .container {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+
+  &__reservation {
+
+    width: 100%;
+  }
+
+  &__banner {
+    background-image: url("../../../assets/images/gallery/xbg_7.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 28rem;
+    max-height: 70rem;
+
+    &-content {
+      width: 100%;
+      height: 100%;
+      font-family: $font-family-heading;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+    }
+
+    .heading {
+      font-size: 4rem;
+      font-weight: 600;
+      color: $white;
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $white;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 1.5rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+    a {
+      padding: 1rem;
+    }
+
+    &-active {
+      color: $primary;
+    }
+  }
+
+
+  &__body {
+    //background-image: url('../../../assets/images/bg-royal.jpg');
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    padding-top: 2rem;
+    background-color: #F4F4F4;
+
+    .container {
+      display: flex;
+      padding: 2rem 3rem 3rem 3rem;
+    }
+  }
+
+  &__left {
+    margin-left: 2rem;
+    width: 62%;
+    padding-right: 8em;
+  }
+
+  &__right {
+    width: 38%;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: $font-family-heading;
+    font-style: italic;
+    color: $primary;
+    margin: 1.5rem 0;
+
+  }
+
+  &__group {
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: $font-family-base;
+    padding-bottom: 0.5rem;
+    color: #222222;
+    font-style: italic;
+  }
+
+  input {
+    background-color: #fff !important;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+  }
+
+  &__date {
+    display: flex;
+
+    &-item {
+      padding: 1rem;
+      background-color: #fff;
+      min-width: 15rem;
+      border-radius: 0.5rem;
+      margin-right: 2rem;
+      box-shadow: 1px 1px 1px 0 #0000000d;
+    }
+
+    .line {
+      display: block;
+      width: 8rem;
+      height: 4px;
+      border-radius: 2px;
+      background-color: #28CA6E;
+
+    }
+
+    .red {
+      background-color: #FBDB91;
+    }
+
+    &-title {
+      font-size: 1.2rem;
+      padding: 0.5rem 0;
+      font-family: $font-family-base;
+      color: #999999;
+
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      font-weight: 500;
+      font-family: $font-family-base;
+      padding-bottom: 0.5rem;
+    }
+
+    small {
+      font-size: 1rem;
+      color: #999999;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: #555555;
+
+  }
+
+  &__room {
+    .name {
+      padding: 2rem 0 1rem;
+      font-size: 1.5rem;
+      font-family: $font-family-heading;
+      font-weight: 600;
+      color: $primary;
+      font-style: italic;
+    }
+
+    .image {
+      display: block;
+      padding-top: -1rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+  }
+
+  .form__inline {
+    display: flex;
+
+    &-item {
+      width: 100%;
+    }
+  }
+
+  .btn-payments {
+    @include button-custom-v($white, $primary);
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+
+  &__bill {
+
+    margin: 0 3rem;
+    padding: 0rem 1.5rem;
+    background-color: #fff;
+    padding: 2rem 2rem 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 1px 0 #0000000d;
+    position: sticky;
+    top: 1rem;
+    bottom: 5rem;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #e1e1e1;
+    }
+
+    &-title {
+      margin-left: 2.5rem;
+    }
+  }
+
+  &__total {
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+    }
+
+
+    &-title {
+      font-size: 1rem;
+      font-weight: 500;
+
+    }
+
+
+
+    &-number {
+      font-size: 1.1rem;
+    }
+
+  }
+
+  .total {
+
+    .booking__total-title,
+    .booking__total-number {
+      font-size: 1.1rem;
+      font-weight: 600;
+
+    }
+  }
+
+  &__info {
+
+    &-item {
+      display: flex;
+      padding-bottom: 0.8rem;
+
+      .fa {
+        font-size: 1.2rem;
+        color: #F65E39;
+      }
+
+      h4 {
+        display: flex;
+        font-weight: 500;
+        padding-left: 0.5rem;
+
+        p {
+          padding-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .ant-form-item-control-input-content {
+    padding-left: 0.5rem !important;
+  }
+
+  .btn-discount{
+    @include button-custom-v($white,$primary);
+    padding: 0.7rem 0.9rem;
+    border-radius: 0.2rem;
+    margin-left: 0.7rem;
+    &__disable{
+      &:hover{
+        opacity: 0.6;
+        color: $white;
+        background-color:$primary;
+      }
+    }
+  }
+}

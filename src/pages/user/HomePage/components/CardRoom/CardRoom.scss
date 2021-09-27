@@ -1,0 +1,81 @@
+@import 'styles/main';
+
+.room {
+  display: block;
+  max-width: 30%;
+  margin: 2rem;
+  background-color: $white;
+  box-shadow: 2px 2px 4px #e1e1e1, -2px -2px 4px #e1e1e1;
+  transition: all 0.3s;
+
+  &__img {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      transition: all 0.5s;
+    }
+  }
+
+  &__content {
+    display: block;
+    padding: 3rem 1.5rem;
+
+    &-title {
+      display: block;
+      font-size: 2rem;
+      padding-bottom: 1rem;
+      font-weight: 600;
+      font-family: $font-family-heading;
+      color: $primary;
+    }
+
+    &-description {
+      font-size: 1rem;
+      line-height: 1.2rem;
+      font-family: $font-family-base;
+      color: $black;
+    }
+
+    &-price {
+      padding-top: 1rem;
+      @include LayoutFlex();
+
+      .price {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $primary;
+        padding-right: 1rem;
+      }
+
+      button {
+        padding: 0.6rem 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+
+        background-color: $primary;
+        border: 2px solid $primary;
+        border-radius: 0.5rem;
+        color: $white;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover {
+          color: $primary;
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    transform: translateY(-1rem);
+
+    img {
+      transform: scale(1.2);
+    }
+  }
+}

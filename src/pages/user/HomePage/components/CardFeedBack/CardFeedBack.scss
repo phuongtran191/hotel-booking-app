@@ -1,0 +1,70 @@
+@import 'styles/main';
+
+.feedback{
+  padding: 2rem;
+  background-color: $white;
+  margin:1rem;
+  cursor: grab;
+  .user{
+    position: relative;
+  }
+  &__user{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family-heading;
+  } 
+  .tick{
+    position: absolute; 
+    top: 0.5rem;
+    right: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 3px solid $white;
+
+    background-color: $primary;
+
+    span{
+      font-size: 1rem;
+     
+    }
+    
+  }
+  &__img{
+    padding-bottom: 1rem;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    img{
+      display: block;
+      width: 100%;
+    }
+
+  }
+  &__name{
+    padding: 1rem;
+    font-size: 2rem;
+  
+  }
+  &__job{
+    text-transform: uppercase;
+    color: $primary;
+    padding-bottom: 1rem;
+    font-family: $font-family-base;
+  }
+  &__content{
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  &:hover{
+    box-shadow: 2px 2px 4px #e1e1e1;
+  }
+}

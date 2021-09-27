@@ -1,0 +1,45 @@
+@import "styles/main";
+.blog{
+  margin: 0 1.5rem;
+  padding-top: 0;
+  cursor: grab;
+  &__img{
+    display: block;
+    width: 100%;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+  &__content{
+    background-color: #fff;
+    padding: 1rem 1rem;
+    font-family: $font-family-base;
+    &-info{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      font-family: $font-family-base;
+      font-size: 0.9rem;
+      color: #979494;
+      padding-bottom: 2rem;
+    }
+    &-title{
+      font-family: $font-family-heading;
+      font-size: 1.4rem;
+      padding-bottom: 1rem;
+      cursor: pointer;
+      color: $primary;
+    }
+    &-description{
+      font-family: $font-family-base;
+      font-size: 1rem;
+      color: #616161;
+      padding-top: 0.5rem;
+      padding-bottom: 3rem;
+    }
+  }
+  &:hover{
+    box-shadow: 4px 4px 6px #e1e1e1;
+  }
+}

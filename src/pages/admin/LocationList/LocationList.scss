@@ -1,0 +1,31 @@
+@import '../../../styles/main.scss';
+
+.location-title {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+// Customize ant -----
+
+.add-location-btn {
+  margin-bottom: 1rem;
+
+  font-size: .9rem;
+  font-family: $font-family-base;
+  border-radius: 4px;
+  border: 1px $primary;
+  background-color: $primary;
+  // &:hover {
+    // cursor: pointer;
+    // background-color: #d6b76e;
+  // }
+}
+.location-btn {
+  text-transform: none !important;
+  border-radius: 4px !important;
+}
+
+.ant-table-content {
+  font-family: $font-family-base;
+}

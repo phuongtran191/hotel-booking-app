@@ -1,0 +1,85 @@
+@import "styles/main";
+
+.comment-item {
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #F0F0F0;
+  font-family: $font-family-base;
+
+}
+
+.comment__user {
+  @include LayoutFlex();
+  float: left;
+}
+
+.user__name {
+  padding-left: 1rem;
+
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-bottom: 0.4rem;
+    padding-top: 0.3rem;
+    color: #737171;
+  }
+
+  small {
+    color: #929191;
+    font-size: 0.9rem;
+  }
+}
+
+.comment__interact {
+  padding-top: 1.5rem;
+  float: right;
+  @include LayoutFlex();
+
+  &-item {
+    @include LayoutFlex();
+
+    p {
+      margin: 0rem 1rem 0 0.5rem;
+      color: #737171;
+    }
+
+    span {
+      color: #737171;
+      cursor: pointer;
+    }
+  }
+}
+
+.comment__title {
+  clear: both;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 1rem 0 0.5rem 0;
+  color: #464545;
+}
+
+.comment__description {
+  font-size: 1.1rem;
+  color: #757474;
+}
+
+.comment__review {
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+
+  &-item {
+    display: flex;
+    margin-right: 1rem;
+
+    p {
+      font-weight: 700;
+      padding-right: 0.5rem;
+      color: #737171;
+    }
+
+    .rate {
+      font-size: 0.8rem;
+    }
+  }
+}

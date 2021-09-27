@@ -1,0 +1,65 @@
+@import '../../../styles/main.scss';
+
+.booking-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.1rem;
+}
+.booking-list-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $primary;
+}
+
+// Customize ant -----
+.roomType-search {
+  width: 300px;
+}
+.edit-booking-btn {
+  text-transform: none !important;
+  border-radius: 4px !important;
+}
+
+.ant-table-content {
+  font-family: $font-family-base;
+}
+
+
+
+// === Responsive ===
+// Tablet
+@include Responsive(md) {
+  .booking-title {
+    display: flex;
+    padding-bottom: 1rem;
+  }
+  .booking-list-title {
+    font-size: 1.8em;
+    padding: 1rem;
+  }
+  .booking-search {
+    width: 100% !important;
+  }
+  .add-booking-btn {
+    font-size: 1.2rem;
+  }
+}
+// Mobile
+@include Responsive(sm) {
+  .booking-title {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .booking-list-title {
+    font-size: 2.1em;
+    padding: 1.5rem;
+  }
+  .booking-search {
+    width: 100%;
+  }
+  .add-booking-btn {
+    font-size: 1.45rem;
+  }
+}

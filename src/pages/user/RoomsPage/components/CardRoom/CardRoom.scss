@@ -1,0 +1,332 @@
+@import "styles/main";
+
+.card-room {
+  display: flex;
+  margin-bottom: 2rem;
+
+  background-color: $white;
+
+  transition: all 0.3s;
+  position: relative;
+
+  .wrap {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: -8px;
+    left: 8px;
+
+    color: $black;
+    overflow: hidden;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+    }
+
+    &:before {
+      width: 20px;
+      height: 8px;
+      right: 100px;
+      background: #4D6530;
+      border-radius: 8px 8px 0px 0px;
+    }
+
+    &:after {
+      width: 8px;
+      height: 20px;
+      right: 0px;
+      top: 100px;
+      background: #4D6530;
+      border-radius: 0px 8px 8px 0px;
+    }
+
+    .ribbon {
+      width: 180px;
+      height: 35px;
+      line-height: 40px;
+      position: absolute;
+      top: 30px;
+      right: -50px;
+      z-index: 2;
+      overflow: hidden;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      border: 1px dashed;
+      box-shadow: 0 0 0 3px #57DD43, 0px 21px 5px -18px rgba(0, 0, 0, 0.6);
+      background: #57DD43;
+      text-align: center;
+    }
+
+    &-green {
+
+      &::before,
+      &::after {
+        background: #4D6530;
+      }
+
+      .ribbon {
+        box-shadow: 0 0 0 3px $primary, 0px 21px 5px -18px rgba(0, 0, 0, 0.6);
+        background: $primary;
+      }
+    }
+
+    &-yellow {
+
+      &::before,
+      &::after {
+        background: #656430;
+      }
+
+      .ribbon {
+        box-shadow: 0 0 0 3px $primary, 0px 21px 5px -18px rgba(0, 0, 0, 0.6);
+        background: $primary;
+      }
+    }
+
+    &-red {
+
+      &::before,
+      &::after {
+        background: #65303b;
+      }
+
+      .ribbon {
+        box-shadow: 0 0 0 3px #ff7875, 0px 21px 5px -18px rgba(0, 0, 0, 0.6);
+        background: #ff7875;
+      }
+    }
+
+  }
+
+
+  &__img {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+
+    .img {
+      display: block;
+    }
+
+  }
+
+  &__thumb {
+    margin-top: 0.2rem;
+    width: 100%;
+    display: flex;
+
+    &-item {
+      width: 50%;
+
+      &+& {
+        margin-left: 0.2rem;
+      }
+    }
+
+  }
+
+  &__content {
+    width: 70%;
+    padding: 0.5rem 1.5rem;
+
+  }
+
+  &__name {
+    font-family: $font-family-base;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: $black;
+
+    padding-bottom: 0.7rem;
+
+    position: relative;
+    z-index: 1;
+
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      //font-style: italic;
+      opacity: 0.8;
+    }
+  }
+
+  &__services {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 25rem;
+
+    &-item {
+      font-size: 1.1rem;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      color: rgb(0, 128, 111);
+      padding-top: 0.7rem;
+
+      span {
+        padding-right: 0.5rem;
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 1rem;
+    font-weight: 300;
+    padding-bottom: 1.5rem;
+    line-height: 1.2;
+    display: block;
+    height: 2.6rem;
+    overflow: hidden;
+  }
+
+  &__rate {
+    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: row;
+
+    .rate {
+      font-size: 0.8rem;
+    }
+
+    .map {
+      color: #096dd9;
+      font-style: italic;
+
+      display: flex;
+      font-size: 0.9rem;
+      font-family: $font-family-base;
+
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+
+      &:hover {
+
+        color: #37abf3;
+      }
+    }
+  }
+
+  &__choice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      margin: 0.5rem;
+      @include button-custom-v($white, $primary);
+      padding: 0.7rem 1rem;
+    }
+  }
+
+  &__price {
+    font-size: 1.2rem;
+    font-family: $font-family-base;
+    font-weight: 300;
+
+    small {
+      font-size: 1rem;
+      color: red;
+      font-style: italic;
+      text-decoration: line-through;
+      padding-right: 0.7rem;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 1.3rem;
+      color: $primary;
+    }
+  }
+
+  &:hover {
+    box-shadow: 4px 4px 6px #e1e1e1, 4px -2px 4px #e1e1e1;
+  }
+
+  &__status {
+    position: absolute;
+    top: 10rem;
+    right: 2rem;
+    // transform: rotate(-10deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    color: rgb(225, 45, 45);
+    border: 2px solid;
+    &-variable{
+      color: green
+    }
+  }
+  .btn-disabled{
+    opacity: 0.5 !important;
+    cursor: auto;
+    &:hover{
+      color: $white;
+    background-color: $primary;
+    }
+  }
+
+}
+
+@include Responsive(lg) {
+  .card-room {
+    &__content {
+      margin: 0.5rem 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    &__name {
+      padding-bottom: 0.5rem;
+    }
+
+    // &__img img {
+    //   margin: 2rem 1rem;
+    // }
+  }
+}
+
+@include Responsive(md) {
+  html {
+    font-size: 90%;
+  }
+
+
+
+}
+
+@include Responsive(sm) {
+  .card-room .wrap .ribbon {
+    width: 129px;
+    height: 20px;
+    line-height: 19px;
+    top: 14px;
+  }
+
+  .card-room .wrap:before {
+    width: 16px;
+    height: 6px;
+    right: 43px;
+  }
+
+  .card-room .wrap:after {
+    width: 6px;
+    height: 14px;
+    top: 46px;
+
+  }
+}

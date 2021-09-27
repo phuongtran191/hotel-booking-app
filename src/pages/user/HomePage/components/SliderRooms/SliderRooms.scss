@@ -1,0 +1,39 @@
+.slider-rooms {
+  width: 100%;
+
+  margin-top: 2rem;
+  .slick-center{
+    transform: scale(1);
+  }
+  &__item {
+
+    width: 35rem;
+    height: 15rem;
+
+    img {
+      width: 25rem;
+      margin: 0 5rem;
+
+    }
+    &:hover{
+     padding: -2rem 0;
+    }
+  }
+
+  &__active {
+    img{
+      transform: scale(1.2);
+    }
+    
+  }
+
+  // &__prev {
+  //   transform: scale(0.6, 0.85) translate(5vw, 0) perspective(500px) rotateY(15deg);
+  // }
+  // &__next {
+  //   transform: scale(0.6, 0.85) translate(-5vw, 0) perspective(500px) rotateY(-15deg);
+  // }
+  // &__current {
+  //   transform: scale(1.1);
+  // }
+}

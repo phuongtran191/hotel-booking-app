@@ -1,0 +1,177 @@
+@import "styles/main";
+
+.rooms-page {
+
+  .container {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+
+  &__reservation {
+
+    width: 100%;
+    position: sticky;
+    z-index: 1051;
+    top: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  &__banner {
+    background-image: url("../../../assets/images/banner-rooms.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 28rem;
+    max-height: 70rem;
+
+    &-content {
+      width: 100%;
+      height: 100%;
+      font-family: $font-family-heading;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+
+    .heading {
+      font-size: 4rem;
+      font-weight: 600;
+      color: $white;
+      padding-bottom: 1rem;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $white;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__body {
+    background-image: url('../../../assets/images/bg-royal.jpg');
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    // padding-top: 4rem;
+    background-color: #F8F8F8;
+
+    .container {
+      display: flex;
+      padding: 3rem 2rem 2rem 2rem;
+    }
+  }
+
+  &__filter {
+    width: 26%;
+  }
+
+  &__list {
+    width: 75%;
+    margin: 0 2rem;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+
+  }
+
+  .ant-checkbox-checked::after {
+    border: 1px solid $primary;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: $primary;
+    border-color: $primary;
+  }
+
+  .ant-slider-handle {
+    border: solid 2px rgba($primary, 0.8);
+  }
+
+  .ant-slider-track {
+    position: absolute;
+    height: 4px;
+    background-color: rgba($primary, 0.8);
+    border-radius: 2px;
+    transition: background-color 0.3s;
+  }
+
+  .ant-slider-handle:focus {
+    border-color: rgba($primary, 0.8);
+  }
+
+  .ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+    border-color: rgba($primary, 0.8);
+  }
+
+  .ant-slider:hover .ant-slider-track {
+    background-color: rgba($primary, 0.8);
+  }
+}
+
+@include Responsive(lg) {
+  .rooms-page {
+    font-size: 90%;
+
+    &__banner {
+      height: 45vh;
+    }
+
+    &__list {
+      margin: 0 0.5rem;
+    }
+
+    &__body {
+      .container {
+        padding-top: 4rem;
+      }
+    }
+  }
+}
+
+@include Responsive(md) {
+  html {
+    font-size: 70%;
+  }
+
+  .rooms-page {
+
+    &__list {
+      width: 100%;
+      margin: 0 0.2rem;
+    }
+
+    &__filter {
+      display: none;
+    }
+
+    &__body {
+      .container {
+        padding-top: 4rem;
+      }
+
+      button {
+        margin: 0.5rem 1rem;
+      }
+    }
+  }
+}
+
+@include Responsive(sm) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@include Responsive(xs) {
+  html {
+    font-size: 50%;
+  }
+}

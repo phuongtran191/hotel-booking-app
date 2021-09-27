@@ -1,0 +1,88 @@
+@import '../../../styles/main.scss';
+
+
+.room-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.room-list {
+  height: 100%;
+}
+.room-list-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: $primary;
+}
+
+
+// Customize ant -----
+.add-room-btn {
+  font-size: .9rem;
+  font-family: $font-family-base;
+  border-radius: 4px;
+  border: 1px $primary;
+  background-color: $primary;
+}
+.room-search {
+  width: 300px;
+}
+.edit-room-btn {
+  text-transform: none !important;
+  border-radius: 4px !important;
+}
+
+.ant-table-content {
+  font-family: $font-family-base;
+}
+.room-list{
+  height: calc(100vh - 10rem);
+}
+
+
+// === Responsive ===
+// Tablet
+@include Responsive(md) {
+  .room-title {
+    display: flex;
+    padding-bottom: 1rem;
+  }
+  .room-list-title {
+    font-size: 1.8em;
+    padding: 1rem;
+  }
+  .room-search {
+    width: 100%;
+  }
+  .add-room-btn {
+    font-size: 1.2rem;
+  }
+  .ant-modal-title {
+    font-size: 1.8rem !important;
+  }
+}
+// Mobile
+@include Responsive(sm) {
+  .room-title {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .room-list-title {
+    font-size: 2.1em;
+    padding: 1.5rem;
+  }
+  .room-search {
+    width: 100%;
+  }
+  .add-room-btn {
+    font-size: 1.45rem;
+  }
+  .ant-modal-title {
+    font-size: 2.2rem !important;
+  }
+  .ant-modal-body {
+    padding: 6px 12px;
+  }
+}

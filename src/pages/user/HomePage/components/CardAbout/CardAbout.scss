@@ -1,0 +1,31 @@
+@import 'styles/main';
+.card-about{
+  transition: all 0.5s;
+  @include LayoutFlex(column,center,center,wrap);
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #fff;
+  margin: 1rem;
+  box-shadow: 2px 2px 4px #e1e1e1, -2px -2px 4px #e1e1e1;
+  &__img{
+    display:block;
+    width: 30%;
+    color: $primary;
+    img{
+      width: 100%;
+    }
+  }
+  &__title{
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-top: 0.5rem;
+    padding-bottom: 0.7rem;
+    font-family: $font-family-heading;
+  }
+  &__content{
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-family: $font-family-base;
+  }
+}

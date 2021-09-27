@@ -1,0 +1,51 @@
+@import "styles/main";
+
+.filter-room {
+  display: block;
+  //border: 1px solid $primary;
+  border-radius: 3px;
+  padding: 1rem;
+  margin: 0 1rem;
+  background-color: $white;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $primary;
+    font-size: 1.2rem;
+
+    padding-bottom: 0.2rem;
+
+    .clear__filter {
+      font-size: 1.2rem;
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+
+  .rate {
+    font-size: 0.9rem;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 400;
+   
+    font-family: $font-family-base;
+    // border-bottom: 1px solid $primary;
+    margin: 1rem 0;
+    padding-left: -1rem;
+  }
+
+  .ant-checkbox-group-item {
+    display: flex;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .number-price {
+    display: flex;
+    justify-content: space-between;
+  }
+}

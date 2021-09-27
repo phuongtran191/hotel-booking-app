@@ -1,0 +1,79 @@
+@import "styles/main";
+
+.collapse-info {
+
+
+  .ant-collapse-header {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  .ant-collapse-item-active {
+    .ant-collapse-header {
+      font-size: 1.2rem;
+      color: $primary;
+      font-weight: 600;
+
+    }
+  }
+
+  [data-theme='compact'] .site-collapse-custom-collapse .site-collapse-custom-panel,
+  .site-collapse-custom-collapse .site-collapse-custom-panel {
+    margin-bottom: 24px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 0px;
+    border-radius: 2px;
+  }
+
+  .ant-collapse-borderless {
+    background-color: #fff !important;
+    border: 0;
+  }
+}
+
+.room-detail {
+  &__description {
+    font-size: 1rem;
+    padding-left: 1rem;
+    font-family: $font-family-base;
+    color: $black;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 1rem;
+  }
+  .table__item{
+    display: flex;
+    justify-content: space-between;
+  }
+  .table__value{
+    &-icon{
+      color: $primary;
+      font-size: 1.2rem;
+    }
+    &-cancel{
+      color: rgb(110, 110, 110);
+      font-size: 1.2rem;
+    }
+  }
+  tr:nth-child(even) {
+    background-color: #F8F5F3;
+  }
+}

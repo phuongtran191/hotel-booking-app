@@ -1,0 +1,192 @@
+@import 'styles/main';
+
+.room-detail {
+  background-color: #F8F8F8;
+
+  .container {
+    display: block;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    padding-top: 5rem;
+  }
+
+  &__banner {
+    background-image: url("../../../assets/images/banner-rooms.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    width: 100%;
+    height: 88vh;
+
+    &-content {
+      width: 100%;
+      height: 100%;
+
+      font-family: $font-family-heading;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+
+    .heading {
+      font-size: 5rem;
+      font-weight: 600;
+      color: $white;
+
+      padding-bottom: 1rem;
+    }
+
+    .title {
+      font-size: 1.8rem;
+      font-weight: 600;
+
+      color: $white;
+    }
+  }
+
+  &__reservation {
+    position: sticky;
+    z-index: 1051;
+    top: 0;
+  }
+
+  &__body {
+    //  background-image: url("../../../assets/images/bg-royal.jpg");
+    font-family: $font-family-base;
+
+    .container {
+      display: flex;
+      padding: 3rem 1rem 0;
+    }
+
+  }
+
+  &__bottom {
+    background-color: #ffff;
+    padding-bottom: 8rem;
+  }
+
+  &__left {
+    width: 60%;
+  }
+
+  &__right {
+    width: 40%;
+
+    h3 {
+      padding-top: 2rem;
+      margin-left: 2rem;
+    }
+    h1{
+      font-size: 2rem;
+      font-family: $font-family-heading;
+      color: $primary;
+      padding-left: 2rem;
+      padding-bottom: 0.5rem;
+    }
+    
+    .card-room__services{
+      padding-left: 2rem;
+      padding-bottom: 3rem;
+      &-item {
+        font-size: 1.2rem;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        color:rgb(0, 128, 111);
+        padding-top: 0.7rem;
+        span {
+          padding-right: 0.5rem;
+          font-weight: 300;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__slide {
+    display: block;
+    width: 100%;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0.3rem 0;
+    margin: 2rem 0 1rem 0;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: $font-family-base;
+    color: $primary;
+  }
+
+  &__price {
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    span {
+      font-size: 1.3rem;
+      color: $primary;
+    }
+  }
+
+  &__description {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+
+  }
+
+
+  &__location {
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $primary;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  // &__booking {
+  //   // position: sticky;
+  //   // top: 8rem;
+  // }
+
+  &__services {
+  
+    
+  }
+
+  .total__rating {
+    margin-left: 2rem;
+    padding-top: 1rem;
+
+    h2 {
+      font-size: 1rem;
+      padding: 0.5rem 0 0.5rem 0;
+    }
+  }
+
+  .ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    display: none;
+  }
+
+  .ant-progress-success-bg,
+  .ant-progress-bg {
+
+    background-color: $primary !important;
+
+  }
+}

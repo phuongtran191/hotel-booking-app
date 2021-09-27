@@ -1,0 +1,27 @@
+@import '../../../../styles/main.scss';
+
+
+// Ant =======
+.ant-sidebar {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  z-index: 9999;
+}
+.site-menu {
+  margin-top: 1.2rem;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+// === Responsive ===
+// Tablet
+// @include Responsive(sm) {
+//   .ant-sidebar {
+//     width: 200px;
+//   }
+// }

@@ -1,0 +1,48 @@
+// ======================================================
+// Abstracts :: Variables
+// ======================================================
+
+// Paths
+
+// Colors
+$white: #fff;
+$black: #5e6666;
+$primary: #D5A944;
+
+// Fonts
+$font-family-base:  'Source Sans Pro', sans-serif;
+$font-family-heading:'Playfair Display', serif;
+
+// Fixed Measurement Constants
+$sidebar-width: 260px;
+$admin-header-height: 70px;
+$admin-content-width: calc(100% - 260px);
+$admin-content-height: calc(100vh - 70px);
+
+// Breakpoints
+$breakpoints: (
+  xs: 480px,
+  sm: 767px,
+  md: 992px,
+  lg: 1200px
+);
+
+//padding
+$paddings:(
+  1 : 0.5rem,
+  2 : 0.8rem,
+  3 : 1.5rem,
+  4 : 2rem,
+  5 : 2.5rem,
+  6: 4rem,
+);
+
+$margin:(
+  1 : 0.5rem,
+  2 : 0.8rem,
+  3 : 1.5rem,
+  4 : 2.5rem,
+  5 : 3rem,
+  6: 6rem,
+);
+

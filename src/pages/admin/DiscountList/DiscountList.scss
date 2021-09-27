@@ -1,0 +1,76 @@
+@import '../../../styles/main.scss';
+
+.discount-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.discount-list-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $primary;
+}
+.discount-list {
+  height: 100%;
+}
+
+// Customize ant -----
+.add-discount-btn {
+
+  font-size: .9rem;
+  font-family: $font-family-base;
+  border-radius: 4px;
+  border: 1px $primary;
+  background-color: $primary;
+}
+.discount-search {
+  width: 300px;
+}
+.discount-btn {
+  text-transform: none !important;
+  border-radius: 4px !important;
+}
+
+.ant-table-content {
+  font-family: $font-family-base;
+}
+
+
+
+// === Responsive ===
+// Tablet
+@include Responsive(md) {
+  .discount-title {
+    display: flex;
+    padding-bottom: 1rem;
+  }
+  .discount-list-title {
+    font-size: 1.8em;
+    padding: 1rem;
+  }
+  .discount-search {
+    width: 100% !important;
+  }
+  .add-discount-btn {
+    font-size: 1.2rem;
+  }
+}
+// Mobile
+@include Responsive(sm) {
+  .discount-title {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .discount-list-title {
+    font-size: 2.1em;
+    padding: 1.5rem;
+  }
+  .discount-search {
+    width: 100%;
+  }
+  .add-discount-btn {
+    font-size: 1.45rem;
+  }
+}

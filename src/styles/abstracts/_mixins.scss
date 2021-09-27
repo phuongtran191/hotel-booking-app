@@ -1,0 +1,39 @@
+@use "variables" as *;
+@mixin LayoutFlex($flex-director:row,$justify-content:center,$align-items:center,$wrap:wrap) {
+    display: flex;
+    align-items: $align-items;
+    justify-content:$justify-content;
+    flex-wrap: $wrap;
+}
+@mixin Responsive($breakpoint){
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin crossBrowser($property, $val){
+  -webkit-#{$property}: $val;
+  -moz-#{$property}: $val;
+  -ms-#{$property}: $val;
+  #{$property}: $val;
+}
+
+@mixin P($val) {
+  @if map-has-key($paddings, $val) {
+    padding: map-get($paddings, $val);
+  }
+}
+
+@mixin M($val) {
+  @if map-has-key($margin, $val) {
+    margin:map-get($margin, $val);
+  }
+}
+
+
+@mixin box($width,$height: $width) {
+  width: $width;
+  height: $height;
+}

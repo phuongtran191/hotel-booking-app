@@ -1,0 +1,6 @@
+/* html{
+  scroll-behavior: smooth;
+} */
+.ant-notification {
+  z-index: 2000 !important;
+}

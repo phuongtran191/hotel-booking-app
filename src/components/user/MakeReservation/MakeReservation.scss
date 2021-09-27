@@ -1,0 +1,147 @@
+@import 'styles/main';
+
+.reservation {
+  padding: 0;
+  background-color: $white;
+  background-image: url("../../../assets/images/bg-black.jpg");
+  color: $primary;
+
+  .container {
+    padding: 1rem 2rem !important;
+    display: flex !important;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+
+  input,
+  .ant-select-item-option-content {
+    font-size: 1rem !important;
+  }
+
+  &__item {
+    min-width: calc(100% / 4);
+    text-align: center;
+
+    .list__title {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 2rem;
+    }
+
+    &-title {
+      font-family: $font-family-heading;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding-bottom: 0.5rem;
+      color: $primary;
+
+    }
+
+    .btn-check {
+      font-weight: 600;
+      font-family: $font-family-heading;
+      padding: 1rem 1rem;
+      border-radius: 2px;
+      box-shadow: null;
+      color: $white;
+      background-color: $primary;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+    }
+  }
+
+  &__select {
+    width: 180px;
+    font-size: 1.1rem;
+  }
+
+  .ant-picker-dropdown,
+  .ant-select-dropdown {
+    z-index: 10 !important;
+  }
+}
+
+@include Responsive(md) {
+  .reservation {
+    display: flex;
+
+    &__select {
+      width: 150px;
+      font-size: 1.1rem;
+    }
+
+    .btn-check {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@include Responsive(sm) {
+  .reservation {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 1rem 0;
+
+    &__select {
+      width: 100px;
+      font-size: 1.1rem;
+    }
+
+    &__title {
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: $primary;
+
+      padding-bottom: 1rem;
+
+    }
+
+    &__item {
+      padding-bottom: 2rem;
+    }
+
+    .btn-check {
+      margin-top: 2rem;
+      background-color: $white;
+      color: $primary;
+
+      border: 1px solid $primary;
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+      height: 28px;
+
+    }
+
+  }
+
+}
+
+
+
+@include Responsive(xs) {
+  .reservation {
+    width: 30rem;
+    box-shadow: none;
+
+    &__item {
+      width: 50%;
+      padding-bottom: 1rem;
+      padding-right: 1rem;
+
+    }
+  }
+}

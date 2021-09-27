@@ -1,0 +1,48 @@
+@import '../../../styles/main.scss';
+
+
+.room-form-title {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $primary;
+  }
+}
+.room-form-content {
+  padding: 1.2rem;
+  padding-top: 2rem;
+  background-color: #fff;
+}
+span.image-delete {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  color: red;
+  background-color: #cecece;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+// === Responsive ===
+// Tablet
+@include Responsive(md) {
+  .room-form-title {
+    h3 {
+      font-size: 1.6rem !important;
+    }
+  }
+}
+// Mobile
+@include Responsive(sm) {
+  .room-form-title {
+    justify-content: flex-end;
+    h3 {
+      display: none;
+    }
+  }
+}

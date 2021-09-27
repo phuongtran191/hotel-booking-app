@@ -1,0 +1,51 @@
+.last-transactions{
+    padding: 20px;
+    margin: 10px 20px 10px 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    box-shadow: 6px 6px 12px #e1e1e1; 
+    &__table{
+        width: 100%;
+    
+        th{
+            text-align: left;
+        }
+        .av{
+            display: flex;
+            justify-items: center;
+            h4{
+                font-size: 16px;
+                margin-top: 7px;
+                margin-left: 15px;
+            }
+        }
+        thead{
+            opacity: 0.8;
+        }
+        
+    }
+    .btn{
+       
+        padding:8px 10px;
+        border-radius: 18px;
+        opacity: 0.8;
+        &__padding{
+            color: #f08903;
+            background-color: #e07f006c;
+        }
+        &__paid{
+            color: green;
+            background-color: rgba(0, 128, 0, 0.473);
+        }
+        &__shipping{
+            color: rgb(22, 97, 182);
+            background-color: rgba(0, 0, 255, 0.452);
+        }
+        &__refund{
+            color:red;
+            background-color: rgba(255, 0, 0, 0.623);
+        }
+        cursor: pointer;
+    }
+  
+}

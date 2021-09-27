@@ -1,0 +1,165 @@
+@import 'styles/main.scss';
+
+.login {
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem auto;
+
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+
+  &__container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  &__side {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 66%;
+    height: 100vh;
+
+    background-image: url("../../../assets/images/gallery/xbg_7.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    font-family: $font-family-heading;
+    color: $black;
+    width: 28%;
+    margin: .65rem auto;
+    padding-top: 0.3rem;
+    padding-bottom: 0.65rem;
+
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 1;
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 1rem auto;
+    }
+  }
+
+  .ant-tabs-top>.ant-tabs-nav .ant-tabs-ink-bar,
+  .ant-tabs-top>div>.ant-tabs-nav .ant-tabs-ink-bar {
+
+    background-color: $primary;
+  }
+
+  .ant-checkbox-checked::after {
+    border: 1px solid $primary;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: $primary;
+    border-color: $primary;
+  }
+
+  .ant-btn-block {
+    background-color: $primary;
+    border: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+  .ant-tabs-tab-btn {
+    text-transform: uppercase;
+    font-family: $font-family-heading;
+    color: $primary;
+  }
+  a{
+    font-size: 1rem;
+    color: $primary;
+    &:hover{
+      color: $black;
+    }
+  }
+}
+
+// Responsive -----------
+// pc HD
+@include Responsive(md) {
+  .login {
+    &__side {
+      width: 62%;
+      height: 100vh;
+    }
+
+    &__content {
+      width: 34%;
+      margin: auto;
+    }
+  }
+}
+
+// Tablet
+@include Responsive(sm) {
+  .login {
+    &__container {
+      display: block;
+      height: 100%;
+    }
+
+    &__side {
+      width: 100%;
+      height: 300px;
+    }
+
+    &__content {
+      width: 85%;
+      margin: auto;
+    }
+  }
+}
+
+// Mobile device
+@include Responsive(xs) {
+  .login {
+
+    &__side {
+      width: 100%;
+      height: 300px;
+    }
+
+    &__content {
+      margin: auto;
+    }
+  }
+}
+
+// Customize Ant ----------
+
+.login-btn {
+  height: 36px;
+
+  text-transform: uppercase;
+  font-size: .95rem;
+  background-color: $primary;
+  border: $primary;
+  border-radius: 4px;
+}
+
+.login-link {
+  color: $primary;
+}
+
+.login-link:hover {
+  color: tint($primary, 20%);
+}
+
+.ant-tabs-tab-btn {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $primary;
+  text-transform: uppercase;
+}

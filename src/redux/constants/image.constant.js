@@ -1,0 +1,4 @@
+export const IMAGE_ACTION = {
+    ADD:"ADD_IMAGE_UPLOAD",
+    DELETE:"DELETE_IMAGE_UPLOAD"
+}
